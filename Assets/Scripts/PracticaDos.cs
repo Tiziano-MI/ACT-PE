@@ -28,5 +28,15 @@ public class PracticaDos : MonoBehaviour
         Debug.Log(ComprobacionDeNumeros(30, 45, 180));
         Debug.Log(ComprobacionDeNumeros(68, -20, 73));
         Debug.Log(ComprobacionDeNumeros(25, 25, 25));
+
+        //EJERCICIO 2: Crear numeros randoms entre -100 y 100
+        int numero1 = Random.Range(-100, 100);
+        int numero2 = Random.Range(-100, 100);
+        int numero3 = Random.Range(-100, 100);
+
+        //EJERCICIO 2: Ejecuta la función y muestra el resultado
+        Debug.Log(numero1);
+        Debug.Log(numero2);
+        Debug.Log(numero3);
     }
 }
