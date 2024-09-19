@@ -39,4 +39,33 @@ public class PracticaDos : MonoBehaviour
         Debug.Log(numero2);
         Debug.Log(numero3);
     }
+
+    private int[] numeros = { 97, -64, -3, -58, -15, 58, 51, 38, -31, -37 };
+
+
+    //EJERCICIO 3: Variable para medir el tiempo
+    private float timer = 0;
+
+
+    private void Update()
+    {
+        //EJERCICIO 3: Suma mas tiempo al timer
+        timer += Time.deltaTime;
+
+        //EJERCICIO 3: Cuando hayan pasado el tiempo establecido, se hara el nuevo array
+        if(timer >= 4.5) NuevoArray();
+    }
+
+
+    private void NuevoArray()
+    {
+        //EJERCICIO 3: Duplica los pares del array
+        for(int a = 0; a < numeros.Length; a++)
+        if (numeros[a] % 2 == 0) numeros[a] *= 2;
+
+        Debug.Log("Array nuevo: " + string.Join(", ", numeros));
+
+        //EJERCICIO 3: Desactiva el script después del nuevo array
+        this.enabled = false;
+    }
 }
